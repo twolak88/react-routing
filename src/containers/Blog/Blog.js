@@ -55,7 +55,15 @@ class Blog extends Component {
       posts = <p style={{textAlign: 'center', color: 'red'}}>Something went wrong</p>
     }
     return (
-      <div>
+      <div className={classes.Blog}>
+        <header>
+          <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/">New Post</a></li>
+            </ul>
+          </nav>
+        </header>
         <section className={classes.Posts}>
           {posts}
         </section>
