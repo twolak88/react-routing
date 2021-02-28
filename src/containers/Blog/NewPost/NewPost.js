@@ -24,6 +24,9 @@ class NewPost extends Component {
         // console.log(error);
       });
   }
+  // componentDidMount() {
+  //   console.log(this.props);
+  // }
 
   render() {
     return (
