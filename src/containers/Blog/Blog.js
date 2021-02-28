@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Route } from 'react-router-dom';
 import classes from './Blog.module.css';
+import NewPost from './NewPost/NewPost';
 import Posts from "./Posts/Posts";
 
 class Blog extends Component {
@@ -23,6 +24,9 @@ class Blog extends Component {
           path="/" 
           exact 
           component={Posts} />
+        <Route 
+          path="/new-post" 
+          component={NewPost} />
       </div>
     );
   }
