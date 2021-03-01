@@ -20,9 +20,11 @@ class NewPost extends Component {
     axios.post('/posts', data)
       .then(response => {
         console.log(response);
-        this.setState({
-          submitted: true
-        });
+        this.props.history.replace('/posts'); //form page is replaced in stack
+        // this.props.history.push('/posts'); //form page is in stack
+        // this.setState({
+        //   submitted: true
+        // });
       })
       .catch(error => {
         //handle error
@@ -34,13 +36,13 @@ class NewPost extends Component {
   // }
 
   render() {
-    let redirect = null;
-    if (this.state.submitted) {
-      redirect = <Redirect to="/posts" />;
-    }
+    // let redirect = null;
+    // if (this.state.submitted) {
+    //   redirect = <Redirect to="/posts" />;
+    // }
     return (
       <div className={classes.NewPost}>
-        {redirect}
+        {/* {redirect} */}
         <h1>Add a Post</h1>
         <label>Title</label>
         <input 
